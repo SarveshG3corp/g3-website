@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLocation } from 'react-router-dom'
 import '../styles/footer.css'
 import logoG3 from '../assets/logo/g3.png'
+import logoG3Ai from '../assets/logo/g3Ai.png'
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -22,7 +24,17 @@ const staggerContainer = {
   }
 }
 
-export function Footer() {
+export function Footer({ variant }) {
+  const location = useLocation()
+  const isG3AiPage =
+    variant === 'g3secai' ||
+    location.pathname === '/g3secai' ||
+    location.pathname.startsWith('/products/') ||
+    location.pathname === '/tracs360' ||
+    location.pathname === '/soltrisk'
+
+  const logoSrc = isG3AiPage ? logoG3Ai : logoG3
+
   return (
     <motion.footer 
       className="footer-root"
@@ -38,7 +50,7 @@ export function Footer() {
           {/* Column 1: Brand */}
           <motion.div className="footer-brand-col" variants={fadeUp}>
             <div className="footer-logo-block">
-              <img src={logoG3} alt="G3 Cyberspace" className="footer-logo-img" />
+              <img src={logoSrc} alt={isG3AiPage ? "G3SEC.ai Logo" : "G3 Cyberspace Logo"} className="footer-logo-img" />
               <div className="footer-logo-text">
                 {/* <span className="footer-company-name">G3 Cyberspace</span> */}
                 <span className="footer-tagline">GOVERN · GUARD · GROW</span>
@@ -66,11 +78,11 @@ export function Footer() {
           <motion.div className="footer-links-col" variants={fadeUp}>
             <h4 className="footer-col-title">Products</h4>
             <ul className="footer-link-list">
-              <li><a href="#g3sec">G3SEC.ai platform</a></li>
-              <li><a href="#tracs">TRACS 360</a></li>
-              <li><a href="#soltrisk">SOLTRISK ASM</a></li>
-              <li><a href="#compliance">Compliance Assurance</a></li>
-              <li><a href="#automation">Privacy Automation</a></li>
+              <li><a href="/g3secai">G3SEC.ai platform</a></li>
+              <li><a href="/products/tracs360">TRACS 360</a></li>
+              <li><a href="/products/soltrisk">SOLTRISK ASM</a></li>
+              <li><a href="/services/cybersecurity-compliance">Compliance Assurance</a></li>
+              <li><a href="/services/privacy-data-protection">Privacy Automation</a></li>
               <li><a href="#contract">Contract Compliance</a></li>
             </ul>
           </motion.div>

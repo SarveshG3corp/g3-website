@@ -224,7 +224,7 @@
 
 /* Main Heading */
 .service-hero-heading {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.8rem, 3.2vw, 2.65rem);
   font-weight: 800;
   line-height: 1.25;
@@ -255,6 +255,7 @@
 
 /* Description Text */
 .service-hero-description {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.15rem;
   line-height: 1.7;
   color: #475569;
@@ -482,6 +483,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
   gap: 8px;
   font-size: 0.82rem;
   font-weight: 800;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: 0.14em;
   color: #0d9488;
   text-transform: uppercase;
@@ -494,7 +496,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
 }
 
 .standards-heading {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 3.6vw, 3.1rem);
   font-weight: 800;
   line-height: 1.18;
@@ -506,6 +508,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
 }
 
 .standards-description {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.05rem;
   line-height: 1.65;
   color: #64748b;
@@ -603,7 +606,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
 }
 
 .standards-card-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 1.18rem;
   font-weight: 800;
   color: #0f172a;
@@ -613,6 +616,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
 }
 
 .standards-card-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.86rem;
   color: #64748b;
   font-weight: 450;
@@ -907,7 +911,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
 }
 
 .method-step-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 1.08rem;
   font-weight: 800;
   color: #0f172a;
@@ -915,6 +919,7 @@ a:focus-visible .btn-text-roll .text-duplicate {
 }
 
 .method-step-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.86rem;
   color: #64748b;
   line-height: 1.5;

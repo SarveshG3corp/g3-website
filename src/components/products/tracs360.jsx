@@ -33,7 +33,7 @@ export default function Tracs360() {
 
   return (
     <div className="service-page-layout light-theme">
-      <Navbar />
+      <Navbar variant="g3secai" />
 
       <main className="vciso-hero-container" style={{ padding: "4rem 1.5rem 6rem" }}>
         <div className="service-page-container" style={{ maxWidth: "1200px", margin: "0 auto" }}>

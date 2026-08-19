@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Navbar } from "./Navbar";
-import { ChevronDown, Check, Calendar, Download, Send, CheckCircle2, ShieldCheck, Clock, FileText } from "lucide-react";
+import { ChevronDown, Check, Download, Send, CheckCircle2, ShieldCheck, Clock, FileText } from "lucide-react";
 import '../styles/servicePages.css';
 import '../styles/quoteForm.css';
 
@@ -120,8 +120,6 @@ const GetaQuote = () => {
     employeeStrength: "",
     requirements: [],
     requirementSummary: "",
-    targetDate: "",
-    preferredNextStep: "Tailored quote / proposal",
     consent: false,
   });
 
@@ -145,14 +143,6 @@ const GetaQuote = () => {
     { value: "201-500", label: "201 - 500 employees" },
     { value: "501-1000", label: "501 - 1,000 employees" },
     { value: "1000+", label: "1,000+ employees" },
-  ];
-
-  // Preferred Next Step Options
-  const preferredNextStepOptions = [
-    { value: "Tailored quote / proposal", label: "Tailored quote / proposal" },
-    { value: "Introductory call", label: "Introductory call" },
-    { value: "Technical scoping session", label: "Technical scoping session" },
-    { value: "Live product demo", label: "Live product demo" },
   ];
 
   const handleInputChange = (e) => {
@@ -192,8 +182,6 @@ Requirements: ${
         : "None selected"
     }
 Requirement Summary: ${formData.requirementSummary || "N/A"}
-Target Date: ${formData.targetDate || "N/A"}
-Preferred Next Step: ${formData.preferredNextStep || "N/A"}
 Consent Given: ${formData.consent ? "Yes" : "No"}
 Generated Date: ${new Date().toLocaleDateString()}
 `;
@@ -440,33 +428,6 @@ Generated Date: ${new Date().toLocaleDateString()}
                     onChange={handleInputChange}
                     placeholder="Describe the business objective, scope, environment and expected timeline."
                   />
-                </div>
-
-                {/* Row 3: Target date & Preferred next step */}
-                <div className="quote-form-grid-2">
-                  <div className="quote-form-field">
-                    <label className="quote-form-label">Target date</label>
-                    <div className="quote-date-input-wrapper">
-                      <input
-                        type="date"
-                        name="targetDate"
-                        className="quote-form-input"
-                        value={formData.targetDate}
-                        onChange={handleInputChange}
-                      />
-                      <Calendar size={18} className="quote-date-icon" />
-                    </div>
-                  </div>
-
-                  <div className="quote-form-field">
-                    <label className="quote-form-label">Preferred next step</label>
-                    <CustomDropdown
-                      options={preferredNextStepOptions}
-                      value={formData.preferredNextStep}
-                      onChange={(val) => setFormData((prev) => ({ ...prev, preferredNextStep: val }))}
-                      placeholder="Select next step"
-                    />
-                  </div>
                 </div>
 
                 {/* Consent Checkbox */}

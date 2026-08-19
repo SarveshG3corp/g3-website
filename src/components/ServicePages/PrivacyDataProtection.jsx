@@ -635,9 +635,6 @@ export default function PrivacyDataProtection() {
                   <h2 className="privacy-cta-title">
                     Start with DPDPA readiness – or align multiple privacy regimes through one operating model.
                   </h2>
-                  <p className="privacy-cta-desc">
-                    Share your jurisdictions, business model, data processing profile and target timeline. We will recommend the right assessment, implementation or retained - support approach.
-                  </p>
                 </div>
 
                 {/* Right Stacked Buttons */}

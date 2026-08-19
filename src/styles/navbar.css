@@ -189,14 +189,6 @@ body {
     bottom: 0;
     left: 50%;
     width: 0%;
-    transform: translateX(-50%);
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(125, 231, 208, 0.75) 25%, 
-        rgba(106, 171, 215, 0.9) 50%, 
-        transparent 100%
-    );
-    animation: flowFromCenter 1.2s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: 0;
 }

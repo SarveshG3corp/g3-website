@@ -206,9 +206,9 @@ export default function SocOperations() {
           {/* Left Hero Content */}
           <div className="soc-hero-left">
 
-            <h1 className="service-hero-heading left-aligned-heading">
-              Strengthen <span className="soc-gradient-text">security monitoring, triage</span> <br className="desktop-break" />
-              and <span className="soc-gradient-text">incident response</span> discipline.
+            <h1 className="service-hero-heading left-aligned-heading" style={{ color: "#000000" }}>
+              Strengthen security monitoring, triage <br className="desktop-break" />
+              and incident response discipline.
             </h1>
 
             <p className="service-hero-description left-aligned-desc">
@@ -280,8 +280,8 @@ export default function SocOperations() {
         <div className="soc-operational-section">
 
           <div className="soc-operational-header-row">
-            <h2 className="standards-heading centering-text-soc">
-              Improve <span className="soc-gradient-text">people, process and <br className="desktop-break" /> monitoring coverage</span> together.
+            <h2 className="standards-heading centering-text-soc" style={{ color: "#000000" }}>
+              Improve people, process and <br className="desktop-break" /> monitoring coverage together.
             </h2>
           </div>
 
@@ -453,8 +453,8 @@ export default function SocOperations() {
         >
           {/* Centered Header with centering-text-soc */}
           <div className="soc-telemetry-header">
-            <h2 className="standards-heading centering-text-soc">
-              Bring relevant <span className='break-text-soc'>telemetry</span> together for  <span className='soc-gradient-text'>better investigation context.</span>
+            <h2 className="standards-heading centering-text-soc" style={{ color: "#000000" }}>
+              Bring relevant <span className='break-text-soc'>telemetry</span> together for better investigation context.
             </h2>
             <p className="standards-desc-centered" style={{ marginTop: '0.85rem' }}>
               Coverage is agreed during onboarding and depends on the security technologies and log sources available in the client environment.
@@ -496,8 +496,8 @@ export default function SocOperations() {
         >
           {/* Header Row with centering-text-soc */}
           <div className="soc-telemetry-header">
-            <h2 className="standards-heading centering-text-soc">
-              Choose the level of <span className="soc-gradient-text">SOC ownership</span> that fits your internal capability.
+            <h2 className="standards-heading centering-text-soc" style={{ color: "#000000" }}>
+              Choose the level of SOC ownership that fits your internal capability.
             </h2>
           </div>
 

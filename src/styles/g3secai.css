@@ -8,7 +8,7 @@
   background: #f8fafc;
   color: #0f172a;
   overflow-x: hidden;
-  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* SECTION 1: HERO SECTION */
@@ -33,6 +33,7 @@
 }
 
 .g3secai-main-title {
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.3rem, 4.2vw, 3.8rem);
   font-weight: 850;
   line-height: 1.18;
@@ -360,6 +361,7 @@
 }
 
 .why-section-title {
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 850;
   color: #1e5288;
@@ -368,6 +370,7 @@
 }
 
 .why-section-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.05rem;
   color: #475569;
   max-width: 700px;
@@ -418,6 +421,7 @@
 }
 
 .why-card-title {
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   color: #0f172a;

@@ -109,28 +109,32 @@ export function Navbar({ variant }) {
       badgeBg: '#ccfbf1',
       badgeColor: '#0f766e',
       title: 'TRACS 360',
-      desc: 'Third - party risk assurance and control workflows.'
+      desc: 'Third - party risk assurance and control workflows.',
+      path: '/products/tracs360'
     },
     {
       badge: 'AS',
       badgeBg: '#ccfbf1',
       badgeColor: '#0f766e',
       title: 'SOLTRISK',
-      desc: 'External attack surface and cyber exposure visibility.'
+      desc: 'External attack surface and cyber exposure visibility.',
+      path: '/products/soltrisk'
     },
     {
       badge: 'CA',
       badgeBg: '#fef3c7',
       badgeColor: '#b45309',
       title: 'Compliance Assurance',
-      desc: 'Structured readiness, evidence and continuous assurance.'
+      desc: 'Structured readiness, evidence and continuous assurance.',
+      path: '/services/cybersecurity-compliance'
     },
     {
       badge: 'PR',
       badgeBg: '#dcfce7',
       badgeColor: '#15803d',
       title: 'Privacy Automation',
-      desc: 'Operational privacy workflows and accountability.'
+      desc: 'Operational privacy workflows and accountability.',
+      path: '/services/privacy-data-protection'
     },
     {
       badge: 'C3',
@@ -261,12 +265,6 @@ export function Navbar({ variant }) {
                                     navigate(srv.path)
                                   }}
                                 >
-                                  <div 
-                                    className="service-badge"
-                                    style={{ background: srv.badgeBg, color: srv.badgeColor }}
-                                  >
-                                    {srv.badge}
-                                  </div>
                                   <div className="service-info">
                                     <h4 className="service-title">{srv.title}</h4>
                                     <p className="service-desc">{srv.desc}</p>
@@ -320,16 +318,22 @@ export function Navbar({ variant }) {
                         /* Mega Dropdown Panel for Products */
                         <div className="mega-dropdown-panel">
                           <div className="mega-dropdown-main">
-                            <h3 className="mega-dropdown-heading">Platform capabilities</h3>
+                            <h3 className="mega-dropdown-heading">G3SecAi - Platform - Capabilities</h3>
                             <div className="services-grid">
                               {productsList.map((prod, idx) => (
-                                <a key={idx} href={`#${prod.title.toLowerCase().replace(/\s+/g, '-')}`} className="service-card">
-                                  <div 
-                                    className="service-badge"
-                                    style={{ background: prod.badgeBg, color: prod.badgeColor }}
-                                  >
-                                    {prod.badge}
-                                  </div>
+                                <a 
+                                  key={idx} 
+                                  href={prod.path || `#${prod.title.toLowerCase().replace(/\s+/g, '-')}`} 
+                                  className="service-card"
+                                  onClick={(e) => {
+                                    if (prod.path) {
+                                      e.preventDefault()
+                                      setOpenDropdown(null)
+                                      setHoverDropdown(null)
+                                      navigate(prod.path)
+                                    }
+                                  }}
+                                >
                                   <div className="service-info">
                                     <h4 className="service-title">{prod.title}</h4>
                                     <p className="service-desc">{prod.desc}</p>
@@ -461,7 +465,7 @@ export function Navbar({ variant }) {
                               navigate(srv.path)
                             }}
                           >
-                            <strong>{srv.badge}:</strong> {srv.title}
+                            {srv.title}
                           </a>
                         ))}
                       </div>
@@ -470,10 +474,17 @@ export function Navbar({ variant }) {
                         {productsList.map((prod, idx) => (
                           <a 
                             key={idx}
-                            href={`#${prod.title.toLowerCase().replace(/\s+/g, '-')}`}
+                            href={prod.path || `#${prod.title.toLowerCase().replace(/\s+/g, '-')}`}
                             className="mobile-dropdown-item"
+                            onClick={(e) => {
+                              if (prod.path) {
+                                e.preventDefault()
+                                setMobileMenuOpen(false)
+                                navigate(prod.path)
+                              }
+                            }}
                           >
-                            <strong>{prod.badge}:</strong> {prod.title}
+                            {prod.title}
                           </a>
                         ))}
                       </div>

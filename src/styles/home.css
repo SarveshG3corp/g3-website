@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem 2rem;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   box-sizing: border-box;
   perspective: 1200px;
   background: #090d16;
@@ -48,7 +48,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   width: 100%;
   box-sizing: border-box;
   perspective: 1200px;
@@ -541,7 +541,7 @@
 
 /* High-Impact Attention-Grabbing Hero Title */
 .hero-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', 'Space Grotesk', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.5rem, 2.7vw, 2.4rem);
   font-weight: 800;
   line-height: 1.25;
@@ -873,7 +873,7 @@
 }
 
 .pillar-card-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 0.98rem;
   font-weight: 800;
   color: #0f172a;
@@ -887,6 +887,7 @@
 }
 
 .pillar-card-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.78rem;
   color: #64748b;
   line-height: 1.35;
@@ -959,6 +960,7 @@
 }
 
 .status-text {
+  font-family: 'Inter', sans-serif;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -991,6 +993,7 @@
 }
 
 .tag-text {
+  font-family: 'Inter', sans-serif;
   font-size: 0.78rem;
   font-weight: 800;
   color: #fef08a;
@@ -1033,7 +1036,7 @@
 }
 
 .point-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 1.05rem;
   font-weight: 800;
   color: #0f172a;
@@ -1047,6 +1050,7 @@
 }
 
 .point-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.84rem;
   color: #475569;
   line-height: 1.5;
@@ -1092,6 +1096,7 @@
 }
 
 .window-tag {
+  font-family: 'Inter', sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   color: #0f766e;
@@ -1165,6 +1170,7 @@
 }
 
 .box-title {
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: #0f172a;
@@ -1172,6 +1178,7 @@
 }
 
 .box-sub {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.76rem;
   color: #64748b;
   line-height: 1.4;
@@ -1219,7 +1226,7 @@
 }
 
 .banner-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -1229,6 +1236,7 @@
 }
 
 .banner-sub {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.92rem;
   color: #fef08a;
   /* Luxury Champagne Gold Accent */
@@ -1354,6 +1362,7 @@
 }
 
 .clients-kicker .kicker-text {
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -1362,7 +1371,7 @@
 }
 
 .clients-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', 'Space Grotesk', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 800;
   color: #025b97;
@@ -1611,7 +1620,7 @@
 }
 
 .featured-video-title {
-  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.1rem, 3.2vw, 3rem);
   font-weight: 800;
   line-height: 1.2;
@@ -1621,6 +1630,7 @@
 }
 
 .featured-video-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.05rem;
   color: #475569;
   line-height: 1.65;
