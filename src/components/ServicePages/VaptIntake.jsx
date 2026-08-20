@@ -181,11 +181,6 @@ const VaptIntake = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 6000);
-  };
 
   const handleDownloadDraft = () => {
     const draftText = `--- G3 CYBERSPACE VAPT QUOTE INTAKE DRAFT ---
@@ -278,7 +273,8 @@ Generated Date: ${new Date().toLocaleDateString()}
               </AnimatePresence>
 
               {/* Form Content */}
-              <form onSubmit={handleSubmit} className="quote-form-body">
+              <form className="quote-form-body" action="https://submit-form.com/UWXw8uoaG"
+                    method="POST">
                 {/* Row 1: Organisation & Business email */}
                 <div className="quote-form-grid-2">
                   <div className="quote-form-field">

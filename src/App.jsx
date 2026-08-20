@@ -14,6 +14,7 @@ import VcisoVdpoAdvisory from './components/ServicePages/VcisoVdpoAdvisory'
 import Securityservices from './components/ServicePages/Securityservices'
 import Tracs360 from './components/products/tracs360'
 import Soltrisk from './components/products/soltrisk'
+import SoltriskDemo from './components/products/Soltrisk-demo'
 import Getaquote from './components/getaquote'
 import { Footer } from './components/Footer'
 
@@ -45,6 +46,8 @@ export default function App() {
         <Route path="/tracs360" element={<Tracs360 />} />
         <Route path="/products/soltrisk" element={<Soltrisk />} />
         <Route path="/soltrisk" element={<Soltrisk />} />
+        <Route path="/products/soltrisk-demo" element={<SoltriskDemo />} />
+        <Route path="/soltrisk-demo" element={<SoltriskDemo />} />
       </Routes>
       <Footer />
     </div>

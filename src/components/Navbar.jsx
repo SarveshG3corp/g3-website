@@ -175,7 +175,7 @@ export function Navbar({ variant }) {
 
   return (
     <div className="navbar-sticky-wrapper">
-      <div className='before-nav'>
+      {/* <div className='before-nav'>
         <div className="before-nav-container">
           <div className="before-nav-left">
             <span className="before-nav-badge">
@@ -202,7 +202,7 @@ export function Navbar({ variant }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <header className="navbar-header" ref={navRef}>
         <nav className="navbar-container">
           {/* Left Section: Brand Logo & Identity */}
@@ -249,7 +249,7 @@ export function Navbar({ variant }) {
                     {item.hasDropdown && isDropdownVisible && (
                       item.name === 'Services' ? (
                         /* Mega Dropdown Panel for Services */
-                        <div className="mega-dropdown-panel">
+                        <div className="mega-dropdown-panel services-dropdown-panel">
                           <div className="mega-dropdown-main">
                             <h3 className="mega-dropdown-heading">Core services</h3>
                             <div className="services-grid">
@@ -274,18 +274,18 @@ export function Navbar({ variant }) {
                             </div>
                           </div>
 
-                          {/* Proposal Callout Card */}
-                          <div className="mega-dropdown-proposal-card">
+                          {/* Proposal Callout Card Horizontal below Core Services */}
+                          <div className="mega-dropdown-proposal-card horizontal">
                             <div>
                               <h4 className="proposal-title">Need a proposal?</h4>
                               <p className="proposal-desc">
                                 Tell us what you need and receive a tailored quote, or use the dedicated VAPT intake for technical requirements.
                               </p>
                             </div>
-                            <div className="proposal-actions">
+                            <div className="proposal-actions horizontal-actions">
                               <a 
                                 href="/getaquote" 
-                                className="btn-quote full-width"
+                                className="btn-quote"
                                 onMouseMove={handleMagneticMove}
                                 onMouseLeave={handleMagneticLeave}
                                 onClick={(e) => {
@@ -298,7 +298,7 @@ export function Navbar({ variant }) {
                                 Get a Quote
                               </a>
                               <a 
-                                href="/services/vapt-security-testing" 
+                                href="/services/vapt-security-testing/intake" 
                                 className="btn-vapt-intake"
                                 onMouseMove={handleMagneticMove}
                                 onMouseLeave={handleMagneticLeave}

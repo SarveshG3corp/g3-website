@@ -89,20 +89,52 @@ export default function VaptSecurityTesting() {
 
   const coverageCards = [
     {
-      title: 'Application security',
-      desc: 'Web, mobile, API and thick - client testing focused on technical weaknesses, access control, business logic and exploitable conditions.'
+      title: 'Web Application Penetration Testing',
+      bullets: [
+        'Assess applications against OWASP Top 10 & business logic vulnerabilities',
+        'Test for authentication, authorization, input validation, and session management flaws',
+        'Identify misconfigurations and insecure components'
+      ]
     },
     {
-      title: 'Infrastructure security',
-      desc: 'External and internal network testing across public services, servers, endpoints, firewalls and configuration weaknesses.'
+      title: 'Mobile Application Penetration Testing',
+      bullets: [
+        'Security testing for Android & iOS applications',
+        'Validate secure storage, API communications, jailbreak/root detection, and reverse engineering resilience',
+        'Map findings against OWASP Mobile Top 10'
+      ]
     },
     {
-      title: 'Cloud and configuration',
-      desc: 'Review of selected cloud configurations, exposed workloads and security settings based on the agreed scope.'
+      title: 'API Penetration Testing',
+      bullets: [
+        'Evaluate REST, SOAP, and GraphQL APIs',
+        'Test authentication, authorization, rate-limiting, data exposure, and injection flaws',
+        'Ensure secure integration with backend systems'
+      ]
     },
     {
-      title: 'Closure support',
-      desc: 'Evidence - backed reporting, walkthroughs, remediation guidance and retesting to validate closure.'
+      title: 'Network Penetration Testing',
+      bullets: [
+        'Internal & external network penetration testing',
+        'Identify misconfigurations, unpatched systems, weak services, and insecure protocols',
+        'Simulate real-world attack vectors to assess resilience'
+      ]
+    },
+    {
+      title: 'Thick Client Application Penetration Testing',
+      bullets: [
+        'Analyze client-side applications (desktop, hybrid, etc.)',
+        'Assess local storage, memory handling, traffic interception, and reverse engineering vulnerabilities',
+        'Verify secure communication with servers'
+      ]
+    },
+    {
+      title: 'Source Code Review',
+      bullets: [
+        'Examine application code to identify security flaws and weak coding practices',
+        'Detect issues like injection, auth gaps, secrets exposure, and logic errors',
+        'Provide secure coding guidance and remediation'
+      ]
     }
   ]
 
@@ -343,9 +375,6 @@ ${formData.additionalContext}
 
           {/* Testing Coverage Section (Centered - Component 1) */}
           <div className="testing-coverage-section">
-            <div className="standards-kicker-line">
-              <span className="kicker-dash">—</span> TESTING COVERAGE
-            </div>
 
             <h2 className="standards-heading">
               Focused coverage across the <br className="desktop-break" />
@@ -353,25 +382,34 @@ ${formData.additionalContext}
               attack surface.
             </h2>
 
-            {/* 4 Coverage Cards Grid with Left-to-Right Entrance */}
-            <div className="coverage-cards-grid">
+            {/* 7 Coverage Cards Grid with Left-to-Right Entrance */}
+            <div className="vapt-7-cards-grid">
               {coverageCards.map((card, index) => (
                 <motion.div
                   key={index}
-                  className="standards-card-item coverage-card-item"
-                  initial={{ opacity: 0, x: -35 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="vapt-coverage-card"
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.15 }}
                   transition={{ 
-                    duration: 0.55, 
-                    delay: (index % 2) * 0.15, 
+                    duration: 0.5, 
+                    delay: (index % 3) * 0.1, 
                     ease: [0.16, 1, 0.3, 1] 
                   }}
                   whileHover={{ y: -6, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <h3 className="standards-card-title">{card.title}</h3>
-                  <p className="standards-card-desc">{card.desc}</p>
+                  <div className="vapt-coverage-card-inner">
+                    <h3 className="vapt-coverage-card-title">{card.title}</h3>
+                    <ul className="vapt-coverage-bullets">
+                      {card.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx}>
+                          <span className="bullet-dot">•</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -391,10 +429,12 @@ ${formData.additionalContext}
                 <motion.div 
                   key={index}
                   className="method-step-row"
-                  initial={{ opacity: 0, x: -25 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.2 }}
                   transition={{ duration: 0.45, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <div className="method-step-num">{step.num}</div>
                   <div className="method-step-info">

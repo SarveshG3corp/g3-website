@@ -208,7 +208,7 @@ export default function Soltrisk() {
               </button>
               <button 
                 className="btn-soltrisk-primary btn-soltrisk-slow-flash" 
-                onClick={() => window.open('https://soltrisk.com/downloads/soltrisk-product-brochure.html', '_blank', 'noopener,noreferrer')}
+                onClick={() => navigate('/soltrisk-demo')}
               >
                 <span>View Brochure</span>
                 <ArrowRight size={18} />
