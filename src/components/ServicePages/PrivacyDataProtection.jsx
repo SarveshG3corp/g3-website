@@ -255,6 +255,52 @@ export default function PrivacyDataProtection() {
           </div>
         </div>
 
+        {/* Floating Popping Animated Sticky Gap Assessment Score Badge */}
+        <motion.div
+          className="sticky-gap-score-badge"
+          initial={{ opacity: 0, scale: 0.5, x: 50 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.4 }}
+          whileHover={{ scale: 1.06, y: -4 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => navigate('/privacy-forms')}
+          style={{
+            position: "fixed",
+            right: "12px",
+            top: "88%",
+            zIndex: 999,
+            cursor: "pointer",
+          }}
+        >
+          <div className="gap-score-badge-body">
+            {/* Modern Shield Icon Badge */}
+            <div className="gap-score-icon-wrapper" style={{
+              width: '36px',
+              height: '36px',
+              borderRadius: '12px',
+              background: 'linear-gradient(135deg, #0d9488 0%, #0284c7 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#ffffff',
+              boxShadow: '0 4px 12px rgba(13, 148, 136, 0.35)',
+              flexShrink: 0
+            }}>
+              <ShieldCheck size={20} />
+            </div>
+
+            {/* Badge Text Content */}
+            <div className="gap-score-text-box">
+              <span className="gap-score-sub" style={{ fontSize: '0.66rem', fontWeight: '700', color: '#64748b' }}>
+                Check out your
+              </span>
+              <span className="gap-score-main" style={{ fontSize: '0.88rem', fontWeight: '800', color: '#0f172a' }}>
+                Gap Assessment Score for DPDPA
+              </span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Action Buttons Centered Across Screen */}
         <div className="service-buttons-centered" style={{ marginTop: '2.5rem', marginBottom: '1rem' }}>
           <button className="btn-compliance-quote" onClick={() => navigate('/getaquote')}>
@@ -351,12 +397,20 @@ export default function PrivacyDataProtection() {
                 <p className="dpdp-box-desc">
                   Our DPDP work is structured around business applicability, data processing visibility, accountable ownership, operational controls and evidence that can be sustained after the initial implementation.
                 </p>
-                <button className="btn-dpdpa-quote" onClick={() => navigate('/calendar')}>
-                  <span className="btn-text-roll">
-                    <span className="text-original">Get a DPDPA Quote</span>
-                    <span className="text-duplicate" aria-hidden="true">Get a DPDPA Quote</span>
-                  </span>
-                </button>
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
+                  <button className="btn-dpdpa-quote" onClick={() => navigate('/calendar')}>
+                    <span className="btn-text-roll">
+                      <span className="text-original">Get a DPDPA Quote</span>
+                      <span className="text-duplicate" aria-hidden="true">Get a DPDPA Quote</span>
+                    </span>
+                  </button>
+                  <button className="btn-discuss-req" onClick={() => navigate('/privacy-forms')}>
+                    <span className="btn-text-roll">
+                      <span className="text-original">Check out your readiness</span>
+                      <span className="text-duplicate" aria-hidden="true">Check out your readiness</span>
+                    </span>
+                  </button>
+                </div>
               </div>
 
               {/* Right 6 Mini Grid Cards */}

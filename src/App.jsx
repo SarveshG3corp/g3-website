@@ -10,6 +10,7 @@ import VaptIntake from './components/ServicePages/VaptIntake'
 import TprmServices from './components/ServicePages/TprmServices'
 import SocOperations from './components/ServicePages/SocOperations'
 import PrivacyDataProtection from './components/ServicePages/PrivacyDataProtection'
+import PrivacyForms from './components/ServicePages/PrivacyForms'
 import VcisoVdpoAdvisory from './components/ServicePages/VcisoVdpoAdvisory'
 import Securityservices from './components/ServicePages/Securityservices'
 import Tracs360 from './components/products/tracs360'
@@ -40,6 +41,8 @@ export default function App() {
         <Route path="/services/tprm-services" element={<TprmServices />} />
         <Route path="/services/soc-operations" element={<SocOperations />} />
         <Route path="/services/privacy-data-protection" element={<PrivacyDataProtection />} />
+        <Route path="/services/privacy-data-protection/intake" element={<PrivacyForms />} />
+        <Route path="/privacy-forms" element={<PrivacyForms />} />
         <Route path="/services/vciso-vdpo-advisory" element={<VcisoVdpoAdvisory />} />
         <Route path="/services/security-services" element={<Securityservices />} />
         <Route path="/products/tracs360" element={<Tracs360 />} />

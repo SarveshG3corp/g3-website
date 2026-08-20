@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ChevronDown, Menu, X, Search, Calendar, Globe, ArrowRight } from 'lucide-react'
+import { ChevronDown, Menu, X } from 'lucide-react'
 import g3Logo from '../assets/logo/g3.png'
 import g3ai from '../assets/logo/g3Ai.png'
 import '../styles/navbar.css'
